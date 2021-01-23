@@ -3,11 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampIntro", "CampIntro\CampIntro.csproj", "{3C385538-1435-49F5-8633-7D023DB00DBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampIntro", "CampIntro\CampIntro.csproj", "{3C385538-1435-49F5-8633-7D023DB00DBD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loops", "Loops\Loops.csproj", "{8E450379-29C4-43F8-8B9D-F669882D4541}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loops", "Loops\Loops.csproj", "{8E450379-29C4-43F8-8B9D-F669882D4541}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassIntro", "ClassIntro\ClassIntro.csproj", "{8550A451-94B4-4209-B9B2-D004DBE50018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassIntro", "ClassIntro\ClassIntro.csproj", "{8550A451-94B4-4209-B9B2-D004DBE50018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Methods", "Methods\Methods.csproj", "{2E1D3A89-A44D-4C24-A04E-18A322AFFD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maths", "Maths\Maths.csproj", "{67B9C291-6ECC-4A0A-9396-B990FDEAF8FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValueAndReferenceTypes", "ValueAndReferenceTypes\ValueAndReferenceTypes.csproj", "{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{8550A451-94B4-4209-B9B2-D004DBE50018}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8550A451-94B4-4209-B9B2-D004DBE50018}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8550A451-94B4-4209-B9B2-D004DBE50018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E1D3A89-A44D-4C24-A04E-18A322AFFD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E1D3A89-A44D-4C24-A04E-18A322AFFD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E1D3A89-A44D-4C24-A04E-18A322AFFD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E1D3A89-A44D-4C24-A04E-18A322AFFD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B9C291-6ECC-4A0A-9396-B990FDEAF8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B9C291-6ECC-4A0A-9396-B990FDEAF8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B9C291-6ECC-4A0A-9396-B990FDEAF8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B9C291-6ECC-4A0A-9396-B990FDEAF8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
