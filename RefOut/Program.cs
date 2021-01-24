@@ -15,6 +15,12 @@ namespace RefOut
             Console.WriteLine($"Result: {result}");
             Console.WriteLine($"Number1: {number1}");
 
+            Console.WriteLine("--------------------");
+
+            var result2 = math2(out number3, number2);
+            Console.WriteLine($"Result: {result2}");
+            Console.WriteLine($"Number3: {number3}");
+
         }
         static int math(ref int number1, int number2)
         {
@@ -28,6 +34,5 @@ namespace RefOut
             number3 = 5;
             return number3 + number2;
         }
-
     }
 }
