@@ -27,9 +27,24 @@ namespace ThirteenJanuary
 
             login();
 
+            Console.WriteLine("--for--");
+            for (int i = 0; i < products.Count; i++)
+            {
+                Console.WriteLine($"Id:{products[i].Id} Name:{products[i].Name} Category:{products[i].Category} Price: {products[i].Price} TL");
+            }
+
+            Console.WriteLine("--foreach--");
             foreach (var product in products)
             {
                 Console.WriteLine($"Id:{product.Id} Name:{product.Name} Category:{product.Category} Price: {product.Price} TL");
+            }
+
+            Console.WriteLine("--while--");
+            int j = 0;
+            while (j < products.Count)
+            {
+                Console.WriteLine($"Id:{products[j].Id} Name:{products[j].Name} Category:{products[j].Category} Price: {products[j].Price} TL");
+                j++;
             }
         }
 
