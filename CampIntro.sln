@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefOut", "RefOut\RefOut.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MethodOverloading", "MethodOverloading\MethodOverloading.csproj", "{7490B011-3D6B-4E90-99DD-DCAA62B921D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Params", "Params\Params.csproj", "{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Params", "Params\Params.csproj", "{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassMetotDemo", "ClassMetotDemo\ClassMetotDemo.csproj", "{C334CEAB-32DF-43F0-BBCC-C38267FF8F59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +93,10 @@ Global
 		{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C334CEAB-32DF-43F0-BBCC-C38267FF8F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C334CEAB-32DF-43F0-BBCC-C38267FF8F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C334CEAB-32DF-43F0-BBCC-C38267FF8F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C334CEAB-32DF-43F0-BBCC-C38267FF8F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,6 +106,7 @@ Global
 		{EEE8C0CC-FFD9-4BA3-BBB3-2154F7260D43} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
 		{7490B011-3D6B-4E90-99DD-DCAA62B921D8} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
 		{30548CD2-CE1C-40A0-B68D-C60EEDF66DF6} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
+		{C334CEAB-32DF-43F0-BBCC-C38267FF8F59} = {BCE21DB7-83D9-4908-A60A-0704408BCE5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9FA6447-444E-4972-8630-4EF7902F9DF5}
