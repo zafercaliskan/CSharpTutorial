@@ -102,7 +102,7 @@ namespace Interfaces
         //Parametre olarak interface alır. Buraya IPersonManager'dan implement edilen tüm class'lar gönderilebilir.
         //Burası IPersonManager kabul ediyor. Oda IPersonManager'dan implement edilen tüm sınıfları kabul eder.
         //Bu bize yazılımda değişimi sağlar. Yazılımda çok temel prensip yeni özellik eklediğinizde mevcut kodlara dokunulmaz.
-        //CustomerManager ve EmployeeManager varken InternManager ekleyip IPersonManager implement ederiz kendi operasyon kodlarını yazarız (Add, Update)
+        //CustomerManager ve EmployeeManager varken InternManager ekleyip IPersonManager'dan implement ederiz kendi operasyon kodlarını yazarız (Add, Update)
         //Fakat ProjectManager için birşey değiştirmemiz gerekmez çünkü IPersonManager kabul ediyor. InternManager'da IPersonManager'dan implement edildiği 
         //için kabul edecektir.
 
