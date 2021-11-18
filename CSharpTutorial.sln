@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CampIntro", "CampIntro\CampIntro.csproj", "{3C385538-1435-49F5-8633-7D023DB00DBD}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loops", "Loops\Loops.csproj", "{8E450379-29C4-43F8-8B9D-F669882D4541}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassIntro", "ClassIntro\ClassIntro.csproj", "{8550A451-94B4-4209-B9B2-D004DBE50018}"
@@ -51,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaces", "Interfaces\In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceAbstractDemo", "InterfaceAbstractDemo\InterfaceAbstractDemo.csproj", "{C21811A0-997F-4CA0-AD63-520B30C55524}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameProject", "GameProject\GameProject.csproj", "{4AD2B981-0506-4943-9551-9A7E3E2EEE02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameProject", "GameProject\GameProject.csproj", "{4AD2B981-0506-4943-9551-9A7E3E2EEE02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,10 +57,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3C385538-1435-49F5-8633-7D023DB00DBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C385538-1435-49F5-8633-7D023DB00DBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C385538-1435-49F5-8633-7D023DB00DBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C385538-1435-49F5-8633-7D023DB00DBD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E450379-29C4-43F8-8B9D-F669882D4541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8E450379-29C4-43F8-8B9D-F669882D4541}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E450379-29C4-43F8-8B9D-F669882D4541}.Release|Any CPU.ActiveCfg = Release|Any CPU
