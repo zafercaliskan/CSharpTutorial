@@ -2,6 +2,9 @@
 
 namespace Inheritance
 {
+    //Inheritance(Kalıtım | Miras)
+    //Interfacelerde bir inheritance örneği gibi çalışırlar ama inheritance değil onlar implementasyondur.
+    //Fakat inheritance gibi kullanılırlar yeni nesil dillerde. 
     class Program
     {
         static void Main(string[] args)
@@ -15,11 +18,11 @@ namespace Inheritance
 
                 new Student
                 {
-                    FirstName = "Engin"
+                    FirstName = "Hasan"
                 },
 
-                //Çünkü interface'de interface tek başına bir anlam ifade etmiyor.
-                //Ama classlarda (class Person) tek başına bir anlam ifade ediyor. Veya inhertance verdiği noktada da.
+                //Burada genel bir insan tanımı yapılabilir.//Base class'ın bir anlamı vardır.
+                //newlenebilir. Fakat interfacelerin tek başına bir anlamı yoktur. newlenemez.
                 new Person
                 {
                     FirstName = "Süleyman"
@@ -30,10 +33,15 @@ namespace Inheritance
             {
                 Console.WriteLine(person.FirstName);
             }
+
+            //? Interface mi inheritance mı kullanmalıyız?
+            //- Inheritance kullanma zorunluluğumuz yoksa interfacelerden yürümek daha iyi çünkü interfaceler inheritance gibi kullanılabiliyor. 
+            //? Peki inheritance kullanmayacak mıyız? 
+            //- Abstract classlarıda baktıktan sonra ne zaman interface ne zaman inheritance kullanacağımız netleşecektir.
         }
     }
 
-    class Person
+    class Person //base class (Customer ve Student'ın babası gibi düşünebiliriz.)
     {
         //field 
         //public int Id; burada field değil Property kullanılır.
@@ -44,9 +52,9 @@ namespace Inheritance
         public string LastName { get; set; }
     }
 
-    //Person base class yani buraya ,Person2 yazamayız çünkü class'ın sadece bir base class'ı olabilir. 
-    //interface olsaydı 1 den fazla yazabilirdik.
-    class Customer : Person
+    class Customer : Person //Buradaki önemli husus sadece birkez inheritance yapabiliriz.
+    //Yani bir base class'ı(her kişinin 1 babası) olur. Ama birden fazla interfaceden implementasyon yapılabilir.
+    //Sıralama olarak önce inheritance yazılır sonra , ile ayırarak implementasyonlar yapılabilir.
     {
         public string City { get; set; }
     }
