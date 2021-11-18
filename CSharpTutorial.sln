@@ -69,6 +69,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesTwo", "Interfaces
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualMethods", "VirtualMethods\VirtualMethods.csproj", "{14DDD852-8BA6-41EE-BD35-305BA35C75D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{0306DA70-FFD3-4B89-A83B-11F4B453EC44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{14DDD852-8BA6-41EE-BD35-305BA35C75D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14DDD852-8BA6-41EE-BD35-305BA35C75D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14DDD852-8BA6-41EE-BD35-305BA35C75D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0306DA70-FFD3-4B89-A83B-11F4B453EC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0306DA70-FFD3-4B89-A83B-11F4B453EC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0306DA70-FFD3-4B89-A83B-11F4B453EC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0306DA70-FFD3-4B89-A83B-11F4B453EC44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
