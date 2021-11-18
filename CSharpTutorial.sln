@@ -53,6 +53,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameProject", "GameProject\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypesAndVariables", "TypesAndVariables\TypesAndVariables.csproj", "{2EE20E82-775C-4764-B879-155AC9D06E69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conditionals", "Conditionals\Conditionals.csproj", "{961B6E93-5E28-415E-BF86-2BF3D1B7DE90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -151,6 +153,10 @@ Global
 		{2EE20E82-775C-4764-B879-155AC9D06E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EE20E82-775C-4764-B879-155AC9D06E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EE20E82-775C-4764-B879-155AC9D06E69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{961B6E93-5E28-415E-BF86-2BF3D1B7DE90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{961B6E93-5E28-415E-BF86-2BF3D1B7DE90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{961B6E93-5E28-415E-BF86-2BF3D1B7DE90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{961B6E93-5E28-415E-BF86-2BF3D1B7DE90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
