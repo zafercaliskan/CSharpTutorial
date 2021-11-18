@@ -6,34 +6,85 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-            string course1 = "Yazılım Geliştirici Yetiştirme Kampı";
-            string course2 = "Programlamaya başlangıç için temel kurs";
-            string course3 = "Java";
-            string course4 = "Python";
-            string course5 = "C++";
+            //ForLoop();
+            //WhileLoop();
+            //DoWhileLoop();
+            //ForeachLoop();
 
-            Console.WriteLine(course1);
-            Console.WriteLine(course2);
-            Console.WriteLine(course3);
-            Console.WriteLine(course4);
-            Console.WriteLine(course5);
-
-            //Array
-            string[] courses = new string[] { course1, "Programlamaya başlangıç için temel kurs", "Java", "Python", "C#" };
-
-            for (int i = 0; i < courses.Length; i++)
+            for (int i = 1; i < 100; i++)
             {
-                Console.WriteLine(courses[i]);
+                Console.WriteLine(IsPrimeNumber(i) ? $"{i} asal bir sayıdır." : $"{i} asal bir sayı değildir.");
+            }
+        }
+
+        private static bool IsPrimeNumber(int number)
+        {
+            bool result = true;
+            for (int i = 2; i < number - 1; i++)
+            {
+                if (number % i == 0)
+                {
+                    result = false;
+                    break;
+                }
             }
 
-            Console.WriteLine("-----");
+            return result;
+        }
 
-            foreach (var course in courses)
+        private static void ForeachLoop()
+        {
+            string[] students = { "Zafer", "Süleyman", "Hasan" };
+
+
+            //Dizi temelli dataların dolaşılması iterate edilmesi (ienumerable array temelli)
+            foreach (var student in students)
             {
-                Console.WriteLine(course);
+                //student = "Ali"; foreach ile döndüğümüz elemanları foreach içerisinde değiştiremeyiz.
+                Console.WriteLine(student);
+            }
+        }
+
+        private static void DoWhileLoop()
+        {
+            int number = 10;
+            do
+            {
+                Console.WriteLine(number);
+                number--;
+            } while (number >= 11); //Şart sağlanmasa bile 1 defa çalışır.
+        }
+
+        private static void WhileLoop()
+        {
+            int number = 0;
+            while (number < 100)
+            {
+                Console.WriteLine(number);
+                number++; //Koşul olarak sayıya bakıyor. Bunu artırmaz sabit bırakırsak sonsuz döngüye girer.
+            }
+        }
+
+        private static void ForLoop()
+        {
+            //Başlangıç değeri; Koşul; Herbir döngü bittiğinde ne yapacağımız
+            for (int i = 1; i < 100; i++)
+            {
+                //1,2,3,4.....
+                Console.WriteLine(i);
             }
 
-            Console.WriteLine("-----");
+            for (int j = 1; j < 100; j += 2) //j+=2 => j=j+2
+            {
+                //1,3,5,7.....
+                Console.WriteLine(j);
+            }
+
+            for (int k = 2; k < 100; k += 2)
+            {
+                //2,4,6,8.....
+                Console.WriteLine(k);
+            }
         }
     }
 }
