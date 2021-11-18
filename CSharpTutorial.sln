@@ -65,19 +65,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesTwo", "InterfacesTwo\InterfacesTwo.csproj", "{B183CD45-DD0C-4D60-9033-22B4486C0C40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtualMethods", "VirtualMethods\VirtualMethods.csproj", "{14DDD852-8BA6-41EE-BD35-305BA35C75D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VirtualMethods", "VirtualMethods\VirtualMethods.csproj", "{14DDD852-8BA6-41EE-BD35-305BA35C75D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{0306DA70-FFD3-4B89-A83B-11F4B453EC44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractClasses", "AbstractClasses\AbstractClasses.csproj", "{0306DA70-FFD3-4B89-A83B-11F4B453EC44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecapDemo", "RecapDemo\RecapDemo.csproj", "{EAB8CDD2-2497-42A1-9F4E-243903EA9B7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RecapDemo", "RecapDemo\RecapDemo.csproj", "{EAB8CDD2-2497-42A1-9F4E-243903EA9B7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{B382E4EF-04D0-4DEC-A01B-8D9B070B8B81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessModifiers", "AccessModifiers\AccessModifiers.csproj", "{B382E4EF-04D0-4DEC-A01B-8D9B070B8B81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constructors", "Constructors\Constructors.csproj", "{34F9F26F-3CA2-4392-82C5-B7DF5B978776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constructors", "Constructors\Constructors.csproj", "{34F9F26F-3CA2-4392-82C5-B7DF5B978776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{5FA7DD37-116F-46B4-A13A-78D4B699A1B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exceptions", "Exceptions\Exceptions.csproj", "{5FA7DD37-116F-46B4-A13A-78D4B699A1B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdoNetDemo", "AdoNetDemo\AdoNetDemo.csproj", "{B03493AF-44E0-4F19-A558-0090EF061AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFrameworkDemo", "EntityFrameworkDemo\EntityFrameworkDemo.csproj", "{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -225,6 +227,10 @@ Global
 		{B03493AF-44E0-4F19-A558-0090EF061AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B03493AF-44E0-4F19-A558-0090EF061AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B03493AF-44E0-4F19-A558-0090EF061AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -243,6 +249,7 @@ Global
 		{B183CD45-DD0C-4D60-9033-22B4486C0C40} = {395B8710-2CD1-4575-865A-F7F50A17DE6A}
 		{EAB8CDD2-2497-42A1-9F4E-243903EA9B7B} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
 		{B03493AF-44E0-4F19-A558-0090EF061AF6} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
+		{65570D2E-97A8-4B2B-8D77-EF2D3FD6E820} = {642E7BD3-1A58-471F-8741-18C3EDC2AD65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D9FA6447-444E-4972-8630-4EF7902F9DF5}
