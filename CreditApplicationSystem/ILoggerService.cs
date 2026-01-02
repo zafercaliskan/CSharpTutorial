@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace OOP3
+namespace CreditApplicationSystem
 {
     interface ILoggerService
     {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP3
+namespace CreditApplicationSystem
 {
     class VehicleCreditManager : ICreditManager
     {

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
-namespace OOP3;
+namespace CreditApplicationSystem;
 
 class Program
 {

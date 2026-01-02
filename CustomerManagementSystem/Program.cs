@@ -1,17 +1,17 @@
-﻿using System;
+using System;
 
-namespace OOP2
+namespace CustomerManagementSystem
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Zafer Çalışkan
+            //Zafer �aliskan
             IndividualCustomer customer1 = new IndividualCustomer();
             customer1.Id = Guid.NewGuid();
             customer1.CustomerNo = "12312312";
             customer1.Name = "Zafer";
-            customer1.Surname = "Çalışkan";
+            customer1.Surname = "�aliskan";
             customer1.TcNo = "1234567899";
 
             //Kodlama.io
@@ -22,7 +22,7 @@ namespace OOP2
             customer2.TaxNumber = "12312312";
 
             //Individual Customer - Corporate Customer
-            //SOLID (L — Liskov substitution principle)
+            //SOLID (L � Liskov substitution principle)
 
             Customer customer3 = new IndividualCustomer();
             Customer customer4 = new CorporateCustomer();

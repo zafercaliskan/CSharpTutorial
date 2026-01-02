@@ -6,17 +6,17 @@ using System.Text;
 
 namespace InterfaceAbstractDemo.Concrete
 {
-    //Starbucks'a bağlı değilim genel bir sistem yapıyoruz.
+    //I am not dependent on Starbucks, we are making a general system.
     public class CustomerCheckManager : ICustomerCheckService
     {
         public bool CheckIfRealPerson(Customer customer)
         {
-            //MernisServiceReference.KPSPublicSoapClient client = new KPSPublicSoapClient(); Bu böyle yapılmaz. 
-            //Mernis'e bağlısın mernis çalışmazsa sistemde çalışmaz. Test amaçlı birşey yapamazsın gerçek sisteme bağlanman gerekir. 
-            //Bağımlısın yani. Mernis değişir başka birşey olur sıkıntı. mernisten vazgeçtik kendi dbimizi kullancaz sıkıntı.
-            //Burada bir adaptör'e ihtiyaç var. Dış bir sistemi sisteme adapte ederken Adaptör denen dizayn pattern kullanılır.
+            //MernisServiceReference.KPSPublicSoapClient client = new KPSPublicSoapClient(); This is not done like this. 
+            //You are dependent on Mernis, if Mernis does not work, the system does not work either. You cannot do anything for testing purposes, you have to connect to the real system. 
+            //So you are dependent. Mernis changes, something else happens, trouble. We gave up on Mernis, we will use our own db, trouble.
+            //There is a need for an adapter here. While adapting an external system to the system, the design pattern called Adapter is used.
 
-            return true; //Doğrulanmış varsayıyoruz.
+            return true; //Assumed verified.
         }
     }
 }

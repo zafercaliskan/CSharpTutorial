@@ -1,12 +1,12 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP2
+namespace CustomerManagementSystem
 {
-    //Gerçek Müşteri(Bireysel)
+    //Individual Customer
     //Inheritance
-    class IndividualCustomer :Customer
+    class IndividualCustomer : Customer
     {
         public string TcNo { get; set; }
         public string Name { get; set; }

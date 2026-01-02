@@ -1,5 +1,5 @@
-﻿using System;
-namespace OOP3
+using System;
+namespace CreditApplicationSystem
 {
     class SmsLoggerService : ILoggerService
     {

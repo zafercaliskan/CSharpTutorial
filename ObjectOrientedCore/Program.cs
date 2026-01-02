@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace OOP
+namespace ObjectOrientedCore
 {
     //(Object-Oriented Programming)
     class Program

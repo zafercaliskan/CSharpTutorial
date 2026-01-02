@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP3
+namespace CreditApplicationSystem
 {
     // CreditManager alone doesn't mean much to me. It acts as a base.
     // In cases where the signature is the same (void Calculate()) but the content is different,

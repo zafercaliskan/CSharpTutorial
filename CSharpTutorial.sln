@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maths", "Maths\Maths.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValueAndReferenceTypes", "ValueAndReferenceTypes\ValueAndReferenceTypes.csproj", "{28D3A5DD-F173-489E-AF5B-82DDC6B4BED2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "OOP\OOP.csproj", "{5640F2EE-ECE7-427F-9384-3238CFFF626C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObjectOrientedCore", "ObjectOrientedCore\ObjectOrientedCore.csproj", "{5640F2EE-ECE7-427F-9384-3238CFFF626C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{4D58B2AB-8CBD-4D14-AA15-633FBADF31C7}"
 EndProject
@@ -35,9 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassMetotDemo", "ClassMeto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDictionary", "MyDictionary\MyDictionary.csproj", "{2A40FBD2-29EE-4431-882E-2D66DC9DEDE8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP2", "OOP2\OOP2.csproj", "{49D7C3D2-3E3A-4EB9-B467-D3E19B94D712}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagementSystem", "CustomerManagementSystem\CustomerManagementSystem.csproj", "{49D7C3D2-3E3A-4EB9-B467-D3E19B94D712}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP3", "OOP3\OOP3.csproj", "{BAF09E22-12DF-4347-8BA0-B6ED9B518822}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CreditApplicationSystem", "CreditApplicationSystem\CreditApplicationSystem.csproj", "{BAF09E22-12DF-4347-8BA0-B6ED9B518822}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfacesDemo", "InterfacesDemo\InterfacesDemo.csproj", "{9C8C6D5D-8D79-4BE5-992B-8988A704B72B}"
 EndProject

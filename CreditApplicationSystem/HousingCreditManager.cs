@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP3
+namespace CreditApplicationSystem
 {
-    class TradesmanCreditManager : ICreditManager
+    class HousingCreditManager : ICreditManager
     {
         public void DoSomething()
         {
@@ -13,7 +13,7 @@ namespace OOP3
 
         public void Calculate()
         {
-            Console.WriteLine("Tradesman credit calculated.");
+            Console.WriteLine("Housing credit payment plan prepared.");
         }
     }
 }

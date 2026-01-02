@@ -37,8 +37,9 @@ The solution consists of multiple isolated console and Windows Forms application
 *   **`Collections`**: `List`, `Dictionary`, and legacy variable types.
 
 ### Data Access & Real-World Simulations
-*   **`OOP2`**: Corporate vs. Individual customer modeling using Inheritance/Polymorphism.
-*   **`OOP3`**: Credit Application System simulation (`ICreditManager`, `ILoggerService`) demonstrating Dependency Injection and loosely coupled design.
+*   **`ObjectOrientedCore`**: Basic product management operations.
+*   **`CustomerManagementSystem`**: Corporate vs. Individual customer modeling using Inheritance/Polymorphism.
+*   **`CreditApplicationSystem`**: Credit Application System simulation (`ICreditManager`, `ILoggerService`) demonstrating Dependency Injection and loosely coupled design.
 *   **`GameProject`**: Simulation of a game sales platform with Gamer validation (e-Government), Promotions (`Campaign`), and Sales logic.
 *   **`AdoNetDemo`**: CRUD operations using pure ADO.NET and `Microsoft.Data.SqlClient`.
 *   **`EntityFrameworkDemo`**: CRUD operations using Entity Framework (ORM).

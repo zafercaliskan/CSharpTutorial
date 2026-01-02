@@ -4,9 +4,9 @@ using System.Text;
 
 namespace InterfacesTwo
 {
-    //Veritabanı işlemlerini yapacğaımız sınıf. Add, Delete, Update etc.
-    //Burada oracle sql, ms sql her birinde kullanacağım teknoloji farklı.
-    //Bunları implemente etmek için ayrı kodlar kullanmak gerekir. 
+    //Class where we will do database operations. Add, Delete, Update etc.
+    //Here, oracle sql, ms sql, the technology I use in each is different.
+    //Separate codes are required to implement these.
     interface ICustomerDal //Dal=> Data Access Layer Dao=> Data Access Object
     {
         void Add();
@@ -14,8 +14,8 @@ namespace InterfacesTwo
         void Delete();
     }
 
-    //Simülasyon 
-    //Burada 2 farklı sql var fakat ikiside ICustomerDaldan implement'e ediliyor. Referanslarını tutabilir.
+    //Simulation 
+    //Here there are 2 different sqls but both are implemented from ICustomerDal. Can hold references.
     class SqlServerCustomerDal : ICustomerDal
     {
         public void Add()
@@ -71,16 +71,16 @@ namespace InterfacesTwo
 
     class CustomerManager
     {
-        //Burada direk sql yada oracle'ı kullansaydık sadece o veri tabanına bağımlıyız.
-        //Yani yeni bir müşteri veritabanım oracle dese biz sadece sql server destekliyoruz demek zorunda kaldırdık.
-        public void Add(ICustomerDal customerDal) //Daha ileride consructordan alacağız. Dependency injection yapacağız.
+        //If we used sql or oracle directly here, we would depend only on that database.
+        //So if a new customer says my database is oracle, we would have to say we only support sql server.
+        public void Add(ICustomerDal customerDal) //Later we will get it from constructor. We will do Dependency Injection.
         {
-            //Böyle yaparsak sql server gönderirse onun içerisinde add çalışır. 
-            //Oracle gönderirse onun içerisinde add methodu çalışır. Ikisinide desteklemiş oluruz.
-            customerDal.Add();  //Burada ne sql ne oracle görüyoruz tamamen interface üzerinden gidiyor.
+            //If we do this, if it sends sql server, add inside it works. 
+            //If it sends Oracle, add method inside it works. We support both.
+            customerDal.Add();  //Here we don't see sql or oracle, it completely goes through interface.
         }
     }
 }
 
-//Polymorphism: Bir nesneyi farklı amaçlarla implement edip o implementasyonların belirli bir kısmına yada tamamanına ulaşmaktır.
-//Yukarıda Polymorphism yaptık. ICustomer dalı sqlserver  biçimnde yada oracle biçiminde implemente ettik.
+//Polymorphism: Implementing an object for different purposes and accessing a certain part or all of those implementations.
+//We did Polymorphism above. We implemented ICustomerDal in the form of sqlserver or oracle.

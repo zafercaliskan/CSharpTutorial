@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OOP2
+namespace CustomerManagementSystem
 {
-    //Tüzel Müşteri
+    //T�zel M�steri
     class CorporateCustomer:Customer
     {
         public string CompanyName { get; set; }
