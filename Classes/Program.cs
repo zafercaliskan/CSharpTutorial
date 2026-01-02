@@ -12,7 +12,7 @@ namespace Classes
 
         private static void DefinePropertyInClass()
         {
-            //Classların bir diğer özelliğide property dediğimiz özellikleri tutmaktır.
+            //Another feature of classes is to hold features we call property.
 
             //Example 1
             Customer customer = new Customer();
@@ -35,18 +35,18 @@ namespace Classes
 
         private static void ClassIntro()
         {
-            //Class nedir ne için kullanılır?
-            //Yapmak istediğimiz işlemleri gruplara ayırmak. Bu grup üzerinden işlemlerimizi yapmak. 
-            //Ve rahatlıkla bu gruba ulaşmak için kullanabiliriz en temel olarak. 
+            //What is a Class and what is it used for?
+            //To separate the operations we want to do into groups. To do our operations over this group. 
+            //And fundamentally we can use it to reach this group easily. 
 
-            //Classın örneği camelCase
+            //Class instance camelCase
             CustomerManager
                 customerManager =
-                    new CustomerManager(); //Aşağıdaki classın örneğini oluşturduk. Referansını da oluşturduk diyebiliriz.
+                    new CustomerManager(); //We created an instance of the class below. We can also say we created its reference.
             customerManager.Add();
             customerManager.Update();
 
-            //ProductManager classının aynı dosyada bulunmasına gerek yok. 
+            //ProductManager class does not need to be in the same file. 
             ProductManager productManager = new ProductManager();
             productManager.Add();
             productManager.Update();
@@ -54,7 +54,7 @@ namespace Classes
     }
 
     //PascalCase
-    class CustomerManager //Müşteriyle ilgili işlemleri koyabiliriz. CustomerManagerı başka bir dosyada da çalıştırabiliriz.
+    class CustomerManager //We can put operations related to customer. We can also run CustomerManager in another file.
     {
         public void Add()
         {

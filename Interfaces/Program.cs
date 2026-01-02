@@ -7,15 +7,15 @@ namespace Interfaces
 
         static void Main(string[] args)
         {
-            //interface new'lenemez.
+            //interfaces cannot be instantiated.
             //IPersonManager personManager = new IPersonManager();
 
-            //IPersonManager customerManager = new CustomerManager(); //Interfaceler referans tiptir. Heap'de CustomerManager'ın bir referans değeri oluşuyor.
-            //IPersonManager'da bu referans değerini tutabiliyor. Yani interfaceler onu implemente eden (new CustomerManager();) class'ın referans numarasını tutabilirler.
+            //IPersonManager customerManager = new CustomerManager(); //Interfaces are reference types. A reference value of CustomerManager is created in Heap.
+            //IPersonManager can also hold this reference value. So interfaces can hold the reference number of the class that implements it (new CustomerManager();).
 
-            IPersonManager customerManager = new CustomerManager(); //CustomerManager referansını tutar.
+            IPersonManager customerManager = new CustomerManager(); //Holds CustomerManager reference.
             customerManager.Add();
-            IPersonManager employeeManager = new EmployeeManager(); //EmployeeManager referansını tutar.
+            IPersonManager employeeManager = new EmployeeManager(); //Holds EmployeeManager reference.
             employeeManager.Add();
 
         }
@@ -24,49 +24,49 @@ namespace Interfaces
     //class PersonManager
     //{
     //    //implemented operation
-    //    public void Add() //PersonManager Add operasyonu heryerde ortak demektir. İçerisine yazılan kod heryerde ortak demektir.
+    //    public void Add() //PersonManager Add operation means it is common everywhere. The code written inside is common everywhere.
     //    {
-    //        Console.WriteLine("Eklendi");
+    //        Console.WriteLine("Added");
     //    }
     //}
     //class CustomerManager : PersonManager
     //{
-    //    //CustomerManager kendi operasyonlarına ek olarak kalıtım aldığı base sınıfın operasyonlarını kullanabilir dedik.
+    //    //We said CustomerManager can use the operations of the base class it inherited in addition to its own operations.
     //}
 
-    interface IPersonManager //Şablon belirliyoruz.  void Add() imzasını kullanmak zorunda fakat kendi kodlarını yazabilir.
+    interface IPersonManager //We determine the template. It has to use void Add() signature but can write its own codes.
     {
         //unimplemented operation
-        void Add(); //Default public tir. Burada içini doldurmuyoruz. Imzam aynı olabilir fakat CustomerManager için ayrı EmployeeManager için ayrı kodlar içerir.
+        void Add(); //Default is public. We don't fill it here. My signature can be the same but it contains separate codes for CustomerManager and EmployeeManager.
         void Update();
     }
 
     //inherits-class ------ implements-interface
-    class CustomerManager : IPersonManager //Bunlarda şablona uymak zorunda. İmzalar aynı. Kod içerikleri farklı. Buda IPersonManager.
+    class CustomerManager : IPersonManager //These also have to comply with the template. Signatures are the same. Code contents are different. This is also IPersonManager.
     {
-        public void Add() //Burada imzalar aynı fakat içerisindeki kodlar farklıdır.
+        public void Add() //Here signatures are the same but codes inside are different.
         {
-            //Müşteri ekleme kodları
-            Console.WriteLine("Müşteri eklendi");
+            //Customer add codes
+            Console.WriteLine("Customer added");
         }
 
         public void Update()
         {
-            Console.WriteLine("Müşteri güncellendi.");
+            Console.WriteLine("Customer updated.");
         }
     }
 
-    class EmployeeManager : IPersonManager //Bunlarda şablona uymak zorunda. İmzalar aynı. Kod içerikleri farklı. Buda IPersonManager.
+    class EmployeeManager : IPersonManager //These also have to comply with the template. Signatures are the same. Code contents are different. This is also IPersonManager.
     {
         public void Add()
         {
-            //Personel ekleme kodları 
-            Console.WriteLine("Personel eklendi.");
+            //Personnel add codes 
+            Console.WriteLine("Personnel added.");
         }
 
         public void Update()
         {
-            Console.WriteLine("Personel güncellendi.");
+            Console.WriteLine("Personnel updated.");
         }
     }
 
@@ -74,37 +74,37 @@ namespace Interfaces
     {
         public void Add()
         {
-            Console.WriteLine("Intern eklendi.");
+            Console.WriteLine("Intern added.");
         }
 
         public void Update()
         {
-            Console.WriteLine("Intern güncellendi.");
+            Console.WriteLine("Intern updated.");
         }
     }
 
     class ProjectManager
     {
-        //Herzaman tek bir nesneyle değil birden fazla nesneyle çalışırsınız. O yüzden buradaki kullanım hatalı desen hatalı.
-        //public void AddCustomer(CustomerManager customerManager) //Hatalı
+        //You always work with multiple objects, not a single one. That's why the usage here is creating a wrong pattern.
+        //public void AddCustomer(CustomerManager customerManager) //Wrong
         //{
         //    customerManager.Add();
         //}
 
-        //public void AddEmployee(EmployeeManager employeeManager) //Hatalı
+        //public void AddEmployee(EmployeeManager employeeManager) //Wrong
         //{
         //    employeeManager.Add();
         //}
 
         public void Add(IPersonManager personManager)
-        //Parametre olarak interface alır. Buraya IPersonManager'dan implement edilen tüm class'lar gönderilebilir.
-        //Burası IPersonManager kabul ediyor. Oda IPersonManager'dan implement edilen tüm sınıfları kabul eder.
-        //Bu bize yazılımda değişimi sağlar. Yazılımda çok temel prensip yeni özellik eklediğinizde mevcut kodlara dokunulmaz.
-        //CustomerManager ve EmployeeManager varken InternManager ekleyip IPersonManager'dan implement ederiz kendi operasyon kodlarını yazarız (Add, Update).
-        //Fakat ProjectManager için birşey değiştirmemiz gerekmez çünkü IPersonManager kabul ediyor. InternManager'da IPersonManager'dan implement edildiği 
-        //için kabul edecektir.
-
-        //********* Yazılımden büyük problem siz projeyi yazarsınız 3 ay sonra müşterinin yeni taleplerde bulunmasıdır. *********
+        //Takes interface as parameter. All classes implemented from IPersonManager can be sent here.
+        //This place accepts IPersonManager. And it accepts all classes implemented from IPersonManager.
+        //This provides us change in software. Very basic principle in software is existing codes are not touched when you add a new feature.
+        //While CustomerManager and EmployeeManager exist, we add InternManager and implement from IPersonManager, write our own operation codes (Add, Update).
+        //But we don't need to change anything for ProjectManager because it accepts IPersonManager. Since InternManager is also implemented from IPersonManager
+        //it will accept.
+        
+        //********* The biggest problem in software is the customer making new requests 3 months after you write the project. *********
         {
             personManager.Add();
         }

@@ -2,9 +2,9 @@
 
 namespace Inheritance
 {
-    //Inheritance(Kalıtım | Miras)
-    //Interfacelerde bir inheritance örneği gibi çalışırlar ama inheritance değil onlar implementasyondur.
-    //Fakat inheritance gibi kullanılırlar yeni nesil dillerde. 
+    //Inheritance
+    //Interfaces act like an example of inheritance, but they are not inheritance, they are implementation.
+    //But they are used like inheritance in modern languages. 
     class Program
     {
         static void Main(string[] args)
@@ -21,8 +21,8 @@ namespace Inheritance
                     FirstName = "Hasan"
                 },
 
-                //Burada genel bir insan tanımı yapılabilir.//Base class'ın bir anlamı vardır.
-                //newlenebilir. Fakat interfacelerin tek başına bir anlamı yoktur. newlenemez.
+                // A general person definition can be made here. //Base class has a meaning.
+                // It can be instantiated. But interfaces do not have a meaning on their own. They cannot be instantiated.
                 new Person
                 {
                     FirstName = "Süleyman"
@@ -34,17 +34,17 @@ namespace Inheritance
                 Console.WriteLine(person.FirstName);
             }
 
-            //? Interface mi inheritance mı kullanmalıyız?
-            //- Inheritance kullanma zorunluluğumuz yoksa interfacelerden yürümek daha iyi çünkü interfaceler inheritance gibi kullanılabiliyor. 
-            //? Peki inheritance kullanmayacak mıyız? 
-            //- Abstract classlarıda baktıktan sonra ne zaman interface ne zaman inheritance kullanacağımız netleşecektir.
+            //? Should we use Interface or Inheritance?
+            //- If we don't have to use Inheritance, it is better to walk through interfaces because interfaces can be used like inheritance. 
+            //? So won't we use inheritance? 
+            //- After looking at Abstract classes, it will become clear when to use interface and when to use inheritance.
         }
     }
 
-    class Person //base class (Customer ve Student'ın babası gibi düşünebiliriz.)
+    class Person //base class (We can think of it as the father of Customer and Student.)
     {
         //field 
-        //public int Id; burada field değil Property kullanılır.
+        //public int Id; Property is used here, not field.
 
         //Property
         public int Id { get; set; }
@@ -52,26 +52,26 @@ namespace Inheritance
         public string LastName { get; set; }
     }
 
-    class Customer : Person //Buradaki önemli husus sadece birkez inheritance yapabiliriz.
-    //Yani bir base class'ı(her kişinin 1 babası) olur. Ama birden fazla interfaceden implementasyon yapılabilir.
-    //Sıralama olarak önce inheritance yazılır sonra , ile ayırarak implementasyonlar yapılabilir.
+    class Customer : Person //The important point here is we can only inherit once.
+    //So it has one base class (every person has 1 father). But implementation can be done from multiple interfaces.
+    //In order, inheritance is written first, then implementations can be done by separating with commas.
     {
         public string City { get; set; }
     }
-    //Örneğin.
+    //Example.
     interface IPerson { }
     interface IPerson2 { }
 
-    //Bir class birden fazla interface alabilir fakat bir class'ın 1 base class'o olabilir.
-    class Student : Person, IPerson, IPerson2 //Önce Inheritance yazılır sonra kaç tane interface varsa o yazılır.
+    //A class can take multiple interfaces but a class can have 1 base class.
+    class Student : Person, IPerson, IPerson2 //Inheritance is written first, then strictly interfaces.
     {
         public string Department { get; set; }
     }
 
-    //Classların tek başlarına bir anlamı vardır ama interfacelerin tek başına bir anlamı yoktur. İkiside inheritance gibi kullanılabiliyor. 
-    //Aslında interfaceler bir implementasyondur. Fakat yeni nesil dillerde inheritance gibi kullanımı söz konusudur.
+    //Classes have a meaning on their own but interfaces do not have a meaning on their own. Both can be used like inheritance. 
+    //Actually interfaces are an implementation. But in modern languages, their usage like inheritance is in question.
 
-    //Öenmli
-    //Hangisini kullanmalıyız? Inheritance Abstract sınıflar için önemlidir. 
-    //Eğer interface kullanabiliyorsanız inheritance'a ihtiyacınız yoksa yada kullanmak zorunda olduğunuzu düşünmüyorsanız interface kullanınmalıyız.
+    //Important
+    //Which one should we use? Inheritance is important for Abstract classes. 
+    //If you can use interface, if you don't need inheritance or if you don't think you have to use it, we should use interface.
 }

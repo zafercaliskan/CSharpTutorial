@@ -2,41 +2,41 @@
 
 namespace AbstractClasses
 {
-    //Interface: Amacımız imzaları oluşturup onu implemente eden classların onları tekrardan yazmasını sağlamak bunu zorunlu hale getirir.
-    //VirtualMethods: Isteyen istediği methodları ezebiliyordu.
-    //AbstactClasses: Bunlarda bir class. Bunu interfaceler ile virtual methodların birleşimi gibi düşünebiliriz.
-    //Tamamen inheritance amacı ile kullanır. Interfaceler ile virtul methodsların kullanım nedenlerini bir araya getirdiğimizde amaç neyse abstacrt classlarda da amaç odur.
+    //Interface: Our goal is to create signatures and make the classes implementing them write them again, making it mandatory.
+    //VirtualMethods: Anyone who wanted could override the methods they wanted.
+    //AbstractClasses: These are also a class. We can think of this as a combination of interfaces and virtual methods.
+    //It is used purely for inheritance purposes. When we combine the reasons for using interfaces and virtual methods, the purpose is the same in abstract classes.
 
     class Program
     {
         static void Main(string[] args)
         {
-            Database database = new Oracle(); //Burada Database'i newleyemeyiz.(abstact classlar newlenmez)
-            //Yani abstract classlar newlenemez.
+            Database database = new Oracle(); //We cannot instantiate Database here. (abstract classes cannot be instantiated)
+            //So abstract classes cannot be 'new'ed.
             database.Add();
-            database.Delete(); //Oracle'ın delete'i çalışır.
+            database.Delete(); //Oracle's delete runs.
 
             Database database2 = new SqlServer();
             database2.Add();
-            database2.Delete(); //Sql server delete çalışır.
+            database2.Delete(); //Sql server delete runs.
 
-            //Abstract classlar bir inheritancedır. SqlServer sadece 1 tane abstractten inherit edilebilir.
-            //Baska bir class veya abstarctten inherit edilemez. Başka interfaceler varsa onlar implement edilebilir.
+            //Abstract classes are an inheritance. SqlServer can inherit from only 1 abstract class.
+            //It cannot inherit from another class or abstract class. If there are other interfaces, they can be implemented.
         }
 
         abstract class Database
         {
-            //Tamamlanmış methods
-            public void Add() //Ekleme hepsinde aynıdır.
+            //Completed methods
+            public void Add() //Add is same in all.
             {
                 Console.WriteLine("Added by default");
             }
 
-            //Tamamlanmamış methods
-            public abstract void Delete(); //Silme işlemi her veri tabanı için farklıdır.
+            //Incomplete methods
+            public abstract void Delete(); //Delete operation is different for each database.
 
 
-            //Not: Hem tamamlanmış hemde tamamlanmamış methodlar yapabiliriz. 
+            //Note: We can have both complete and incomplete methods. 
         }
 
         class SqlServer : Database
@@ -49,7 +49,7 @@ namespace AbstractClasses
 
         class Oracle : Database
         {
-            public override void Delete()  //tamamnlanmamış methodu override ediyoruz.
+            public override void Delete()  //we override the incomplete method.
             {
                 Console.WriteLine("Deleted by oracle");
             }

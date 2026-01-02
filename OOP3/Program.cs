@@ -1,53 +1,49 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OOP3
+namespace OOP3;
+
+class Program
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            //Interface onu implemente eden class'ın referansını tutabilir.
+        // Interface can hold the reference of the class that implements it.
 
-            ////KonutKrediManager konutKrediManager = new KonutKrediManager();
-            //IKrediManager konutKrediManager = new KonutKrediManager();
-            //konutKrediManager.Hesapla();
+        // ICreditManager housingCreditManager = new HousingCreditManager();
+        // housingCreditManager.Calculate();
 
-            ////IhtiyacKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
-            //IKrediManager ihtiyacKrediManager =new IhtiyacKrediManager();
-            //ihtiyacKrediManager.Hesapla();
+        // ICreditManager personalFinanceCreditManager =new PersonalFinanceCreditManager();
+        // personalFinanceCreditManager.Calculate();
 
-            ////TasitKrediManager tasitKrediManager = new TasitKrediManager();
-            //IKrediManager tasitKrediManager = new TasitKrediManager();
-            //tasitKrediManager.Hesapla();
+        // ICreditManager vehicleCreditManager = new VehicleCreditManager();
+        // vehicleCreditManager.Calculate();
 
 
-            IKrediManager konutKrediManager = new KonutKrediManager();
-            IKrediManager ihtiyacKrediManager = new IhtiyacKrediManager();
-            IKrediManager tasitKrediManager = new TasitKrediManager();
+        ICreditManager housingCreditManager = new HousingCreditManager();
+        ICreditManager personalFinanceCreditManager = new PersonalFinanceCreditManager();
+        ICreditManager vehicleCreditManager = new VehicleCreditManager();
 
-            ILoggerService databaseLoggerService = new DatabaseLoggerService();
-            ILoggerService fileLoggerService = new FileLoggerService();
-            ILoggerService smsLoggerService = new SmsLoggerService();
-            
+        ILoggerService databaseLoggerService = new DatabaseLoggerService();
+        ILoggerService fileLoggerService = new FileLoggerService();
+        ILoggerService smsLoggerService = new SmsLoggerService();
+        
 
-            List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerService(), new FileLoggerService() };
-            
-            BasvuruManager basvuruManager = new BasvuruManager();
-            //Önemli nokta. BasvuruYap(IKrediManager) yani KonutKrediManager, IhtiyacKrediManager, TasitKrediManager alabilir.
-                      
-            //Burada tasit kredisi yerine ihtiyacda gönderebilirdik veya herhangi bir kredi türünüde veya logger türünü de
-            //Bu yazılımda sürdürülebilirliği sağlar.
-            basvuruManager.BasvuruYap(new EsnafKredisiManager(), loggers);
+        List<ILoggerService> loggers = new List<ILoggerService> { new SmsLoggerService(), new FileLoggerService() };
+        
+        ApplicationManager applicationManager = new ApplicationManager();
+        // Important point. MakeApplication(ICreditManager) means it can take HousingCreditManager, PersonalFinanceCreditManager, VehicleCreditManager.
+                  
+        // Here we could have sent personal finance instead of vehicle credit or any credit type or any logger type
+        // This ensures sustainability in the software.
+        applicationManager.MakeApplication(new TradesmanCreditManager(), loggers);
 
-            List<IKrediManager> krediler = new List<IKrediManager>() { konutKrediManager, tasitKrediManager };
-            basvuruManager.KrediOnBilgilendirmesiYap(krediler);
+        List<ICreditManager> credits = new List<ICreditManager>() { housingCreditManager, vehicleCreditManager };
+        applicationManager.ProvidePreliminaryInfo(credits);
 
-            //Sürdürülebilirlik ispatı: SOLID (O) -> Sisteme yeni bir kod klendiğinde mevcut kodlar bozulmaz.
-            //Esnaf kredisi eklersin IKrediManager'dan miras alır. Ve implement eder hesapla kodlarını yazarız.
-            //Sms logger eklerkende ILoggerService'den miras alır. Log methodunu implent'e eder kodlarını yazar ve kullanırız. 
-            //Ve hiçbir yerde değişiklik yapmaya gerek duymayız.
+        // Proof of sustainability: SOLID (O) -> When new code is added to the system, existing codes do not break.
+        // You add tradesman credit, it inherits from ICreditManager. And it implements, we write calculate codes.
+        // When adding Sms logger, it inherits from ILoggerService. It implements Log method, writes its codes and we use it. 
+        // And we don't need to make changes anywhere.
 
-        }
     }
 }

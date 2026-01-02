@@ -9,7 +9,7 @@ namespace OOP3
     {
         public void Log()
         {
-            Console.WriteLine("Veritabanına loglandı");
+            Console.WriteLine("Logged to database");
         }
     }
 }

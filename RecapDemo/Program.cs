@@ -32,18 +32,18 @@ namespace RecapDemo
         }
     }
 
-    //class Logger //Bir class'ı böyle çıplak bırakınca (9interface'i yada base'i yoksa) bundan kork. 
-    //{ //Bu böyle olduğu için sadece newleyip kullanabiliriz.
+    //class Logger // If one leaves a class naked like this (without interface or base), be afraid of it. 
+    //{ // Since it is like this, we can only 'new' it and use it.
     //    public void Log()
     //    {
-    //        Console.WriteLine("Logged to database!"); //Yarın birgün başka şekilde logllama istenirse patlarız.
+    //        Console.WriteLine("Logged to database!"); // If another way of logging is requested tomorrow, we explode.
     //    }
     //}
 
 
-    //Doğru implementasyon
-    //Burada interface kullandık çünkü: Heryerde Log methodu farklı kodlar içerecek. Ortak kod yok.
-    //Db file aynı olsaydı sadece smsde değişseydi virtual yapılabilirdi. Abstract sınıflar içinde geçerli.
+    // Correct implementation
+    // We used interface here because: Log method will contain different codes everywhere. No common code.
+    // If Db and file were same and only sms changed, virtual could be used. Also valid for abstract classes.
     interface ILogger
     {
         void Log();

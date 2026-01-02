@@ -44,24 +44,24 @@ namespace Generics
 
     class Utilities
     {
-        //Hangi Typeda array olarak verirsek o tipte liste olarak alabiliriz.
+        // Whatever type we give as array, we can get as a list of that type.
         public List<T> BuildList<T>(params T[] items)
         {
             return new List<T>(items);
         }
     }
 
-    //Genericlerle biz sıklıkla yaptığımız operasyonları nesne bazlı olarak
-    //değiştirebileceğimiz bu nesneyle çalışacağım diyebileceğimiz bir yapıya işaret eder.
+    // Generics point to a structure where we can say we will work with this object 
+    // that we can change object-based operations we do frequently.
 
-    //interface, class veya abstract class'a farketmez hepsinin sonuna <'Buraya'> buraya
-    //yazdığı kısım içerisine birşey yazmamış yeterli. T Typedan dolayı verdiğimiz bir takma ad.
-    //Herhangi bir büyük harfle yazdığımız birşeyde olabilir. TEntity de olur.
+    // It doesn't matter if it is interface, class or abstract class, it is enough if we write nothing 
+    // inside the <'Here'> part at the end of all of them. T is a nickname we give because of Type.
+    // It can be anything we write with a capital letter. TEntity is also fine.
 
-    //where T : struct ise sadece değer tiplerin yazılmasını sağlar. 
-    interface IRepository<T> where T : class, IEntity, new() //referans tip olmalı aynı zamanda newlenebilir olmalı. Sadece db nesnleri yazabilmeleri için IEntity den imp. olanların yazılmasını sağladık. 
-    //class yazdığımız da referans tip olabilir demiş oluyoruz. int yazamayız hata verir class dediğimiz için ama
-    //string yazarız çünkü string referans tiptir fakat değer tip gibi davranır.
+    // where T : struct ensures that only value types can be written.
+    interface IRepository<T> where T : class, IEntity, new() // must be reference type and also must be newable. We ensured that only those implementing IEntity can be written so that they can write only db objects.
+    // when we write class, we say it can be reference type. We cannot write int, it gives error because we said class but
+    // we can write string because string is a reference type but behaves like value type.
     {
         List<T> GetAll();
         T Get(int id);

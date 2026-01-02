@@ -28,12 +28,12 @@ namespace OOP2
             Customer customer4 = new CorporateCustomer();
 
             //Reference Type
-            //Burada olay referans tip. 
+            //The case here is Reference Type.
 
-            //Olay base sınıfın(Customer) onu inherited eden 
-            //IndividualCustomer ve CorporateCustomer'ın referansını tutabilmesidir. 
+            //The event is that the base class (Customer) can hold the reference 
+            //of IndividualCustomer and CorporateCustomer which inherit from it.
 
-            //Base sınıf referans tutucudur.
+            //Base class is a reference holder.
 
             CustomerManager customerManager = new CustomerManager();
             customerManager.Add(customer1);
