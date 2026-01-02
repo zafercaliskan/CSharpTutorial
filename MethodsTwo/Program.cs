@@ -14,19 +14,19 @@ namespace MethodsTwo
 
             int number1 = 20, number2 = 100;
             var result = Add2(number1, number2);
-            //Yukarıda number1 ve number2 nin sadece değerlerini göndeririz.
+            //Above we only send the values of number1 and number2.
 
             Console.WriteLine("Add2 result {0}", result);
             Console.WriteLine("number1 {0}", number1);
 
-            //Burada number1'e bir değer ataması yapmadan gönderemeyiz.
-            //ref keyword'ü ile gönderirsek method içerisinde yapılacak değişik burayıda etkiler.
+            //Here we cannot send without assigning a value to number1.
+            //If we send with ref keyword, the change made inside the method affects here as well.
             var result2 = Add3(ref number1, number2);
             Console.WriteLine("Add3 result {0}", result2);
             Console.WriteLine("ref number1 {0}", number1);
 
             number1 = 20;
-            //Burada out'da ilk değer ataması zorunlu değildir.
+            //Here default value assignment is not mandatory in out.
             var result3 = Add4(out number1, number2);
             Console.WriteLine("Add4 result {0}", result2);
             Console.WriteLine("out number1 {0}", number1);
@@ -36,60 +36,60 @@ namespace MethodsTwo
             Console.WriteLine("Add5 sum: {0}", result4);
         }
 
-        //Methodları neden kullanırız?
-        //Yaptığımız bir işi heryerde tekrar tekrar yazmak yerine bir method içerisine yazarız. 
-        //Bu methodu da ihtiyaç duyduğumuz yerlerden çağırırız. don't repeat yourself için methodları kullanırız. 
+        //Why do we use methods?
+        //Instead of writing a job we do everywhere repeatedly, we write it inside a method. 
+        //We call this method from where we need it. We use methods for DON'T REPEAT YOURSELF (DRY). 
 
-        //Geriye birşey döndürmez. Parametresiz method.
+        //Does not return anything. Parameterless method.
         static void Add()
         {
             Console.WriteLine("Add...");
         }
 
-        //Method Overloading: Aynı isimlimli methoddan 2 tane var fakat method imzaları farklı.
+        //Method Overloading: There are 2 methods with the same name but method signatures are different.
         static int Add(int number1, int number2)
         {
             return number1 + number2;
         }
 
-        //Geriye int döndürür. 
+        //Returns int. 
         static int Gather(int number1, int number2)
         {
             return number1 + number2;
         }
 
-        //Eğer number verilmezse default olarak 1 atar. 
+        //If number is not given, it assigns 1 by default. 
         static int SquareOfNumber(int number = 1)
         {
             return number * number;
         }
 
-        //Yukarıdaki değişken ile aynı isim bile olsa bu number1 farklıdır. Sadece yukarıdan buraya değer gelir.
+        //Even if it has the same name as the variable above, this number1 is different. Only value comes here from above.
         static int Add2(int number1, int number2)
         {
-            number1 = 30; //Burada atadğımız 30 Main içerisindeki number1'i değiştirmez.
-            //Çünkü değer tipler ile çalışıyoruz. Değer tipde mevzu sadece değer ile ilgilidir.
+            number1 = 30; //The 30 we assigned here does not change number1 inside Main.
+            //Because we are working with value types. In value types, the issue is only about value.
             return number1 + number2;
         }
 
-        //Ref keyword ile değer tiplerin referans tip gibi kullanılmasını sağlar.
+        //With Ref keyword, it ensures usage of value types as reference types.
         static int Add3(ref int number1, int number2)
         {
-            number1 = 30; //Yukarıda main içerisindeki number1 de değiştirir çünkü 2 defa
-                          //değişken tanımlamak yerine yukarıdaki değişkenin referansını kullan dedik.
+            number1 = 30; //It changes number1 in main above because
+                          //we said use the reference of the variable above instead of defining variable 2 times.
             return number1 + number2;
         }
 
         //Out keyword 
         static int Add4(out int number1, int number2)
         {
-            number1 = 30; //out ile gönderirken ilk değer set edilmesi zorunlu değil.
-                          //Fakat burada değer verilmesi zorunlu vermezsek patlarız.
+            number1 = 30; //setting initial value is not mandatory while sending with out.
+                          //But giving value here is mandatory, if we don't we explode.
 
             return number1 + number2;
         }
 
-        //Params ile aynı tipde methoda istediğimiz kadar parametre gönderebiliriz.
+        //With Params we can send as many parameters as we want to the method of the same type.
         static int Add5(params int[] numbers)
         {
             return numbers.Sum();

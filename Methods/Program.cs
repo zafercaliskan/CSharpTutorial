@@ -27,7 +27,7 @@ namespace Methods
             //type safe
             foreach (var product in products)
             {
-                Console.WriteLine("Name:{0}\nPrice:{1}\n--------");
+                Console.WriteLine("Name:{0}\nPrice:{1}\n--------", product.Name, product.Price);
             }
 
             //instance

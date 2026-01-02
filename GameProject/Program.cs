@@ -8,11 +8,11 @@ namespace GameProject
     {
         static void Main(string[] args)
         {
-            //1- Önce varlıklarınızı bulun.
+            //1- First find your entities.
             //--
-            //Burası çalışabilmek için doğrulama micro service'ine ihtiyaç duyuyor.
+            //This place needs validation micro service to work.
             //GamerManager gamerManager = new GamerManager(new UserValidationManager());
-            GamerManager gamerManager = new GamerManager(new NewEStateUserValidationManager());
+            GamerManager gamerManager = new GamerManager(new NewEGovernmentUserValidationManager());
 
             //gamerManager.Add(new Gamer
             //{
@@ -41,7 +41,7 @@ namespace GameProject
             var campaign = new Campaign
             {
                 Id=1,
-                Name="30TL indirim",
+                Name="30TL discount",
                 DiscountAmount=30
             };
 

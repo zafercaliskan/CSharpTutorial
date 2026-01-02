@@ -12,11 +12,11 @@ namespace Arrays
             students[2] = "Hasan";
 
             //students[3] = "Ali"; System.IndexOutOfRangeException: 'Index was outside the bounds of the array
-            //index 0 dan başlar.Burada index taştığı için patlarız. 
+            //index starts from 0. Since the index overflows here, we throw an exception. 
+            
+            //students = new string[4]; when we say this, we lose the values inside students.
 
-            //students = new string[4]; dediğimizde ise students içerisindeki değerleri kaybederiz.
-
-            int[] numbers = { 1, 2, 3, 4 }; //Şeklinde de tanımlama yapabiliriz.
+            int[] numbers = { 1, 2, 3, 4 }; //We can also define it like this.
 
             foreach (var student in students)
             {
@@ -34,18 +34,18 @@ namespace Arrays
             // Multidimensional Arrays
             string[,] regions = new string[5, 3]
             {
-                {"İstanbul","İzmit","Balıkesir"},
-                {"Ankara","Konya","Kırıkkale"},
+                {"Istanbul","Izmit","Balikesir"},
+                {"Ankara","Konya","Kirikkale"},
                 {"Antalya","Adana","Mersin"},
                 {"Rize","Trabzon","Samsun"},
-                {"İzmir","Muğla","Manisa"}
+                {"Izmir","Mugla","Manisa"}
             };
 
-            //GetUpperBound ile dizinin ilk Dimension'ı (boyutunu) alırız
+            //With GetUpperBound(0), we get the first Dimension of the array.
             for (int i = 0; i <= regions.GetUpperBound(0); i++)
             {
                 Console.WriteLine("-------------");
-                //GetUpperBound ile dizinin ikinci Dimension'ı (boyutunu) alırız
+                //With GetUpperBound(1), we get the second Dimension of the array.
                 for (int j = 0; j <= regions.GetUpperBound(1); j++)
                 {
                     Console.WriteLine(regions[i, j]);
